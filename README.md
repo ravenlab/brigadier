@@ -1,7 +1,9 @@
 # Brigadier 
 
+![build](https://github.com/ravenlab/brigadier/workflows/build/badge.svg)
 [![License](https://img.shields.io/github/license/Mojang/brigadier.svg)](https://github.com/ravenlab/brigadier/blob/master/LICENSE)
 [![](https://jitpack.io/v/ravenlab/brigadier.svg)](https://jitpack.io/#ravenlab/brigadier)
+
 
 Brigadier is a command parser & dispatcher, designed and developed for Minecraft: Java Edition. You can find the original repository [here.](https://github.com/Mojang/brigadier)
 

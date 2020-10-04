@@ -31,7 +31,6 @@ task sourcesJar(type: Jar) {
 artifacts {
     archives jar
     archives sourcesJar
-    archives javadocJar
 }
 
 jacocoTestReport {
@@ -40,9 +39,4 @@ jacocoTestReport {
 		html.enabled false
 		html.destination file("${buildDir}/jacocoHtml")
 	}
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
 }

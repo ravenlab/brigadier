@@ -1,51 +1,43 @@
-# Brigadier [![Latest release](https://img.shields.io/github/release/Mojang/brigadier.svg)](https://github.com/Mojang/brigadier/releases/latest) [![License](https://img.shields.io/github/license/Mojang/brigadier.svg)](https://github.com/Mojang/brigadier/blob/master/LICENSE)
+# Brigadier 
+
+[![License](https://img.shields.io/github/license/Mojang/brigadier.svg)](https://github.com/ravenlab/brigadier/blob/master/LICENSE)
+[![](https://jitpack.io/v/ravenlab/brigadier.svg)](https://jitpack.io/#ravenlab/brigadier)
 
 Brigadier is a command parser & dispatcher, designed and developed for Minecraft: Java Edition and now freely available for use elsewhere under the MIT license.
 
 # Installation
-Brigadier is available to Maven & Gradle via `libraries.minecraft.net`. Its group is `com.mojang`, and artifact name is `brigadier`.
+Brigadier is available to Maven & Gradle via `jitpack.io`
 
-## Gradle
+### Gradle
 First include our repository:
 ```groovy
 maven {
-    url "https://libraries.minecraft.net"
+    url "https://jitpack.io"
 }
 ```
 
 And then use this library (change `(the latest version)` to the latest version!):
 ```groovy
-compile 'com.mojang:brigadier:(the latest version)'
+compile 'com.github.ravenlab:brigadier:Tag'
 ```
 
 ## Maven
 First include our repository:
 ```xml
 <repository>
-  <id>minecraft-libraries</id>
-  <name>Minecraft Libraries</name>
-  <url>https://libraries.minecraft.net</url>
+  <id>jitpack.iok</id>
+  <url>https://jitpack.io</url>
 </repository>
 ```
 
 And then use this library (change `(the latest version)` to the latest version!):
 ```xml
 <dependency>
-    <groupId>com.mojang</groupId>
+    <groupId>com.github.ravenlab</groupId>
     <artifactId>brigadier</artifactId>
-    <version>(the latest version)</version>
+    <version>Tag</version>
 </dependency>
 ```
-
-# Contributing
-Contributions are welcome ! :D
-
-Most contributions will require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to,
-and actually do, grant us the rights to use your contribution. For details, visit https://cla.microsoft.com.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 # Usage
 At the heart of Brigadier, you need a `CommandDispatcher<S>`, where `<S>` is any custom object you choose to identify a "command source".
@@ -131,5 +123,3 @@ There are two forms of "usage strings" provided by this library, both require a 
 `getAllUsage(node, source, restricted)`  will return a list of all possible commands (executable end-points) under the target node and their human readable path. If `restricted`, it will ignore commands that `source` does not have access to. This will look like [`foo`, `foo <bar>`]
 
 `getSmartUsage(node, source)` will return a map of the child nodes to their "smart usage" human readable path. This tries to squash future-nodes together and show optional & typed information, and can look like `foo (<bar>)`
-
-[![GitHub forks](https://img.shields.io/github/forks/Mojang/brigadier.svg?style=social&label=Fork)](https://github.com/Mojang/brigadier/fork) [![GitHub stars](https://img.shields.io/github/stars/Mojang/brigadier.svg?style=social&label=Stars)](https://github.com/Mojang/brigadier/stargazers)

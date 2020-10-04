@@ -21,7 +21,7 @@ And then use this library (change `(the latest version)` to the latest version!)
 compile 'com.github.ravenlab:brigadier:Tag'
 ```
 
-## Maven
+### Maven
 First include our repository:
 ```xml
 <repository>

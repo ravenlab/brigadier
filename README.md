@@ -30,7 +30,7 @@ First include our repository:
 </repository>
 ```
 
-And then use this library (change `(the latest version)` to the latest version!):
+And then use this library change `Tag` to the latest version found on jitpack:
 ```xml
 <dependency>
     <groupId>com.github.ravenlab</groupId>
